@@ -85,13 +85,11 @@ const users =  [
   },
 ];
 
-const getUsersWithGender = (array, gender) => array.filter(array => array.gender === gender).map(({name}) => name);
+// Write code under this line
+const getUsersWithFriend = (array, friendName) => array.filter(({friends}) => friends.includes(friendName)).map(({name}) => name);
 
-console.log(getUsersWithGender(users, 'male'));
+console.log(getUsersWithFriend(users, 'Briana Decker'));
+// [ 'Sharlene Bush', 'Sheree Anthony' ]
 
-/* [
-  "Moore Hensley",
-  "Ross Vazquez",  
-  "Carey Barr",  
-  "Blackburn Dotson"  
-] */
+console.log(getUsersWithFriend(users, 'Goldie Gentry'));
+// [ 'Elma Head', 'Sheree Anthony' ]

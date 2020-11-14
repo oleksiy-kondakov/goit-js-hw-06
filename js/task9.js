@@ -85,13 +85,9 @@ const users =  [
   },
 ];
 
-const getUsersWithGender = (array, gender) => array.filter(array => array.gender === gender).map(({name}) => name);
+// Write code under this line
+const getNamesSortedByFriendsCount = (array) => [...array].sort((a,b) => a.friends.length - b.friends.length).map(({name}) => name);
 
-console.log(getUsersWithGender(users, 'male'));
+ console.log(getNamesSortedByFriendsCount(users));
+// [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
 
-/* [
-  "Moore Hensley",
-  "Ross Vazquez",  
-  "Carey Barr",  
-  "Blackburn Dotson"  
-] */
